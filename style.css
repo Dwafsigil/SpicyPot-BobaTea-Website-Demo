@@ -1,0 +1,433 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  line-height: 1.5;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+html {
+  font-size: 16px;
+}
+
+p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.hero-container {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("images/hero-image.png");
+  background-size: cover;
+  background-position: center;
+
+  aspect-ratio: 16/9;
+}
+
+/* Header */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 1rem 2.5rem;
+  background-color: #f4efe6;
+  /* sticky header */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  color: #2b2b2b;
+  font-family: "Playfair Display", serif;
+
+  letter-spacing: 2px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: white;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #2b2b2b;
+  font-size: 1.3rem;
+}
+
+/* Overlay */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(24, 24, 24, 0.5);
+  /* opacity: 50%; */
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-overlay.hidden {
+  display: none;
+}
+
+.menu-panel {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  background-color: rgb(20, 20, 20);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  padding-top: 1.5rem;
+
+  gap: 1rem;
+  border-radius: 6px;
+}
+
+.menu-panel a {
+  color: white;
+  background-color: rgba(74, 74, 74, 0.5);
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  padding: 1rem 1rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.menu-quit {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  padding-right: 0;
+}
+
+/* Hero */
+
+.hero {
+  /* background-color: blue; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* gap: 1px; */
+
+  /* aspect-ratio: 4/3; */
+  /* height: auto; */
+  background-color: #6b7a3a;
+  color: #f4efe6;
+  width: 100%;
+  padding: 1rem 1rem;
+  padding-top: 3rem;
+}
+
+.restaurant-name {
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.restaurant-type {
+  /* font-size: 1.3rem; */
+  margin-top: 0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero-descriptor {
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  padding: 1rem 1.5rem;
+}
+
+.background-green {
+  background-color: #6b7a3a;
+}
+
+.background-white {
+  background-color: #f4efe6;
+}
+
+.menu {
+  margin-top: 1rem;
+  color: #6b7a3a;
+  background-color: #f4efe6;
+
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+
+  font-weight: 1000;
+
+  /* letter-spacing: 3px; */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-size: 0.75rem;
+  /* padding: 0 2rem; */
+}
+
+/* First Set of Featured Dishes */
+.featured-one {
+  display: flex;
+  flex-direction: column;
+  background-color: #6b7a3a;
+  gap: 1.5rem;
+  padding: 2rem 2rem;
+  /* border-radius: 6px; */
+}
+
+.featured-one img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Welcome */
+
+.welcome {
+  padding: 1rem 1rem;
+  padding-top: 3rem;
+  /* font-size: 0.5rem; */
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f4efe6;
+}
+
+.welcome-header {
+  font-size: 1.75rem;
+  margin-bottom: 0;
+  font-family: "Playfair Display", serif;
+  color: #b22100;
+}
+
+.welcome-text {
+  text-align: center;
+  margin-top: 0;
+  font-family: "Lato", sans-serif;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+.order-online {
+  margin-top: 2rem;
+  background-color: #6b7a3a;
+  color: #f4efe6;
+
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+
+  font-weight: 1000;
+  /* letter-spacing: 3px; */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* font-size: 1.3rem; */
+  display: inline-block;
+  /* padding: 0 2rem; */
+  font-family: "Lato", sans-serif;
+  font-size: 0.75rem;
+}
+
+/* Featured Dishes */
+
+.featured-two {
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 4/3;
+  /* overflow: hidden; */
+  gap: 1.5rem;
+  padding: 2rem 2rem;
+  background-color: #f4efe6;
+}
+
+.featured-two img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Restaurant Information */
+.information {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 3rem;
+  background-color: #6b7a3a;
+  color: #f4efe6;
+  margin-bottom: 0;
+  padding-top: 3rem;
+}
+
+.information a {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 1rem 1rem; */
+}
+
+.google-map {
+  width: 100%;
+  display: block;
+  border: 3px solid #b22100;
+  border-radius: 6px;
+}
+
+.google-map img {
+  width: 100%;
+}
+
+.restaurant-information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  /* margin: 0 auto; */
+  /* padding: 0 0.75rem; */
+
+  /* margin: 0rem 1rem; */
+  /* padding: 0rem 1rem; */
+}
+
+.restaurant-information li {
+  margin-top: 0.5rem;
+  padding: 1rem 0rem;
+}
+
+.restaurant-information h2 {
+  margin-bottom: 0;
+  font-family: "Lato", sans-serif;
+  /* font-family: "Inter", sans-serif; */
+}
+.restaurant-information p {
+  margin-top: 0;
+  /* font-family: "Lato", sans-serif; */
+  font-family: "Inter", sans-serif;
+}
+
+.media {
+  background-color: #6b7a3a;
+  padding: 1.5rem 3rem;
+  padding-bottom: 2rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.media a {
+  color: #f4efe6;
+
+  width: 2rem;
+  height: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.media i {
+  color: white;
+  font-size: 1.25rem;
+}
+
+.instagram {
+  background-color: #e4405f;
+  font-size: 20px;
+}
+
+.facebook {
+  background-color: #1877f2;
+}
+
+.yelp {
+  background-color: #ff1a1a;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  background-color: #212121;
+  color: #f4efe6;
+  justify-content: center;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  font-variant-numeric: lining-nums;
+}
+
+.copyright {
+  opacity: 0.85;
+}
+
+/* 375px   (typical phone)
+768px   (tablet)
+1024px  (small laptop)
+1440px */
