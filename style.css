@@ -3,6 +3,7 @@
 *::after {
   box-sizing: border-box;
   /* background-color: #1b1b1b; */
+  /* outline: 1px solid red; */
 }
 
 ul {
@@ -20,6 +21,8 @@ body {
   margin: 0;
   font-family: "Playfair Display", serif;
   line-height: 1.5;
+  background-color: #1b1b1b;
+  overflow-x: hidden;
 }
 
 body.menu-open {
@@ -70,14 +73,16 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
-  width: 101%;
+  width: 100%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   background-color: #1b1b1b;
   background-image: url("images/spicypot_banner.png");
-
   background-repeat: no-repeat;
   overflow: hidden;
   background-position: 0% 10%;
+
+  /* animation */
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -88,9 +93,6 @@ header {
   padding: 1rem 2.5rem;
   background-color: #000000;
   background: transparent;
-  /* sticky header */
-
-  /* background-image: url("images/spicypot_banner.png"); */
 }
 
 .navbar button {
@@ -111,6 +113,16 @@ header {
   /* border-radius: 6px; */
   border-radius: 50%;
   border: 3px solid #b8922f;
+
+  /* animation */
+  transition:
+    width 0.5s ease,
+    height 0.5s ease;
+}
+
+header.scrolled .logo {
+  width: 80px;
+  height: 80px;
 }
 
 .nav-items {
@@ -121,8 +133,8 @@ header {
 }
 
 .menu-toggle {
-  width: 10px;
-  height: 44px;
+  width: 24px;
+  height: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,10 +148,14 @@ header {
 .menu-toggle span {
   width: 1.5rem;
   height: 3px;
-  background: #ffffff;
+  background: #f4efe6;
 
   border-radius: 2px;
 }
+
+/* header.scrolled .span {
+
+} */
 
 /* Overlay */
 .menu-overlay {
@@ -251,7 +267,7 @@ header {
   font-size: 1rem;
   font-family: "Lato", sans-serif;
   text-align: center;
-  padding: 2rem 1.5rem;
+  padding: 1rem 1.5rem;
   padding-bottom: 1rem;
 }
 
@@ -260,7 +276,7 @@ header {
 }
 
 .background-white {
-  background-color: #f4efe6;
+  background-color: #b8922f;
 }
 
 .menu {
@@ -307,7 +323,6 @@ header {
 .welcome {
   padding: 1rem 1rem;
   padding-top: 3rem;
-  /* font-size: 0.5rem; */
 
   display: flex;
   align-items: center;
@@ -327,7 +342,7 @@ header {
   text-align: center;
   margin-top: 0;
   font-family: "Lato", sans-serif;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   margin-top: 1rem;
   font-weight: 500;
 
@@ -335,11 +350,11 @@ header {
 }
 
 .order-online {
-  margin-top: 2rem;
-  background-color: #1b1b1b;
+  margin-top: 1rem;
   color: #f4efe6;
+  background-color: #1b1b1b;
 
-  padding: 0.75rem 2rem;
+  padding: 1rem 2.5rem;
   text-decoration: none;
 
   font-weight: 1000;
@@ -350,15 +365,12 @@ header {
   display: inline-block;
   /* padding: 0 2rem; */
   font-family: "Lato", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
-
-/* Featured Dishes */
 
 .featured-two {
   display: flex;
   flex-direction: column;
-  aspect-ratio: 4/3;
   /* overflow: hidden; */
   gap: 1.5rem;
   padding: 2rem 2rem;
@@ -398,6 +410,8 @@ header {
   display: block;
   border: 3px solid #c9a227;
   border-radius: 6px;
+
+  /* height: 300px; */
 }
 
 .google-map img {
@@ -428,6 +442,12 @@ header {
   /* font-family: "Inter", sans-serif; */
 }
 .restaurant-information p {
+  margin-top: 0;
+  /* font-family: "Lato", sans-serif; */
+  font-family: "Inter", sans-serif;
+}
+
+.restaurant-information a {
   margin-top: 0;
   /* font-family: "Lato", sans-serif; */
   font-family: "Inter", sans-serif;
